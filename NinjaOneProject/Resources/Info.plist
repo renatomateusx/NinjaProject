@@ -2,13 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>NinjaOneProject.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-	</dict>
+	<key>ApiBaseURL</key>
+	<string>$(API_BASE_URL)</string>
+	<key>ApiKey</key>
+	<string>$(API_KEY)</string>
+	<key>ImageBaseURL</key>
+	<string>$(IMAGE_URL)</string>
 </dict>
 </plist>

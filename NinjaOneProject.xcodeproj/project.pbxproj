@@ -7,15 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30BCB92628D0A4470053A7B8 /* CategoryItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCB92528D0A4470053A7B8 /* CategoryItemsViewController.swift */; };
+		30BCB92828D0A6180053A7B8 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCB92728D0A6180053A7B8 /* ItemCell.swift */; };
+		30BCB92A28D0FB940053A7B8 /* DetailItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCB92928D0FB940053A7B8 /* DetailItemViewController.swift */; };
+		30BCB92C28D107C60053A7B8 /* ItemDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCB92B28D107C60053A7B8 /* ItemDetailCell.swift */; };
 		30CF1F2228CFD96A0071842F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F2128CFD96A0071842F /* AppDelegate.swift */; };
-		30CF1F2428CFD96A0071842F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F2328CFD96A0071842F /* SceneDelegate.swift */; };
-		30CF1F2628CFD96A0071842F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F2528CFD96A0071842F /* ViewController.swift */; };
-		30CF1F2928CFD96A0071842F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF1F2728CFD96A0071842F /* Main.storyboard */; };
+		30CF1F2628CFD96A0071842F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F2528CFD96A0071842F /* HomeViewController.swift */; };
 		30CF1F2B28CFD96C0071842F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30CF1F2A28CFD96C0071842F /* Assets.xcassets */; };
 		30CF1F2E28CFD96C0071842F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30CF1F2C28CFD96C0071842F /* LaunchScreen.storyboard */; };
 		30CF1F3928CFD96C0071842F /* NinjaOneProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F3828CFD96C0071842F /* NinjaOneProjectTests.swift */; };
-		30CF1F4328CFD96C0071842F /* NinjaOneProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F4228CFD96C0071842F /* NinjaOneProjectUITests.swift */; };
-		30CF1F4528CFD96C0071842F /* NinjaOneProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F4428CFD96C0071842F /* NinjaOneProjectUITestsLaunchTests.swift */; };
+		30CF1F5B28CFDB130071842F /* AppMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F5A28CFDB130071842F /* AppMainCoordinator.swift */; };
+		30CF1F5D28CFDB1C0071842F /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F5C28CFDB1C0071842F /* AppConfigurations.swift */; };
+		30CF1F5F28CFDB420071842F /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F5E28CFDB420071842F /* UIViewController+Extensions.swift */; };
+		30CF1F6128CFDB510071842F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F6028CFDB510071842F /* String+Extensions.swift */; };
+		30CF1F6328CFDB6E0071842F /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F6228CFDB6E0071842F /* Localizable.swift */; };
+		30CF1F6528CFDB8D0071842F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30CF1F6428CFDB8D0071842F /* Localizable.strings */; };
+		30CF1F6E28CFDC040071842F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F6D28CFDC040071842F /* HomeCoordinator.swift */; };
+		30CF1F7028CFDC2A0071842F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F6F28CFDC2A0071842F /* HomeViewModel.swift */; };
+		30CF1F7528CFDC5C0071842F /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F7428CFDC5C0071842F /* Bindable.swift */; };
+		30CF1F7728CFDC6C0071842F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F7628CFDC6C0071842F /* Coordinator.swift */; };
+		30CF1F7928CFDC7D0071842F /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F7828CFDC7D0071842F /* NetworkRepository.swift */; };
+		30CF1F7C28CFDD410071842F /* NinjaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F7B28CFDD410071842F /* NinjaModel.swift */; };
+		30CF1F7E28CFDE550071842F /* NInjaEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F7D28CFDE550071842F /* NInjaEndPoint.swift */; };
+		30CF1F8028CFDE8D0071842F /* NinjaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F7F28CFDE8D0071842F /* NinjaRepository.swift */; };
+		30CF1F8228CFE4580071842F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F8128CFE4570071842F /* FeedViewController.swift */; };
+		30CF1F8428CFE5130071842F /* UIVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F8328CFE5130071842F /* UIVIew+Extensions.swift */; };
+		30CF1F8728CFF1A70071842F /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F8628CFF1A70071842F /* CategoryCell.swift */; };
+		6D2FB8F935B7712D234A8E87 /* Pods_NinjaOneProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E3C6B0C17F8056188EAE3 /* Pods_NinjaOneProject.framework */; };
+		B2A0E2D420DC287D2F89E681 /* Pods_NinjaOneProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7877829B4DA2C4D42388DF /* Pods_NinjaOneProjectTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,29 +45,44 @@
 			remoteGlobalIDString = 30CF1F1D28CFD96A0071842F;
 			remoteInfo = NinjaOneProject;
 		};
-		30CF1F3F28CFD96C0071842F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 30CF1F1628CFD96A0071842F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 30CF1F1D28CFD96A0071842F;
-			remoteInfo = NinjaOneProject;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30BCB92528D0A4470053A7B8 /* CategoryItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsViewController.swift; sourceTree = "<group>"; };
+		30BCB92728D0A6180053A7B8 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		30BCB92928D0FB940053A7B8 /* DetailItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemViewController.swift; sourceTree = "<group>"; };
+		30BCB92B28D107C60053A7B8 /* ItemDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailCell.swift; sourceTree = "<group>"; };
 		30CF1F1E28CFD96A0071842F /* NinjaOneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaOneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CF1F2128CFD96A0071842F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30CF1F2328CFD96A0071842F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30CF1F2528CFD96A0071842F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		30CF1F2828CFD96A0071842F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30CF1F2528CFD96A0071842F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30CF1F2A28CFD96C0071842F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30CF1F2D28CFD96C0071842F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30CF1F2F28CFD96C0071842F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30CF1F3428CFD96C0071842F /* NinjaOneProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinjaOneProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CF1F3828CFD96C0071842F /* NinjaOneProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaOneProjectTests.swift; sourceTree = "<group>"; };
-		30CF1F3E28CFD96C0071842F /* NinjaOneProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinjaOneProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30CF1F4228CFD96C0071842F /* NinjaOneProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaOneProjectUITests.swift; sourceTree = "<group>"; };
-		30CF1F4428CFD96C0071842F /* NinjaOneProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaOneProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		30CF1F5A28CFDB130071842F /* AppMainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainCoordinator.swift; sourceTree = "<group>"; };
+		30CF1F5C28CFDB1C0071842F /* AppConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
+		30CF1F5E28CFDB420071842F /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		30CF1F6028CFDB510071842F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		30CF1F6228CFDB6E0071842F /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		30CF1F6428CFDB8D0071842F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		30CF1F6D28CFDC040071842F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		30CF1F6F28CFDC2A0071842F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		30CF1F7428CFDC5C0071842F /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		30CF1F7628CFDC6C0071842F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		30CF1F7828CFDC7D0071842F /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		30CF1F7B28CFDD410071842F /* NinjaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaModel.swift; sourceTree = "<group>"; };
+		30CF1F7D28CFDE550071842F /* NInjaEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NInjaEndPoint.swift; sourceTree = "<group>"; };
+		30CF1F7F28CFDE8D0071842F /* NinjaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaRepository.swift; sourceTree = "<group>"; };
+		30CF1F8128CFE4570071842F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		30CF1F8328CFE5130071842F /* UIVIew+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extensions.swift"; sourceTree = "<group>"; };
+		30CF1F8628CFF1A70071842F /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		94E8B3BA5AD825CC878B3AE4 /* Pods-NinjaOneProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinjaOneProject.release.xcconfig"; path = "Target Support Files/Pods-NinjaOneProject/Pods-NinjaOneProject.release.xcconfig"; sourceTree = "<group>"; };
+		9D4E3C6B0C17F8056188EAE3 /* Pods_NinjaOneProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NinjaOneProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B3A541E0191C99FA00FE55 /* Pods-NinjaOneProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinjaOneProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-NinjaOneProjectTests/Pods-NinjaOneProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD7877829B4DA2C4D42388DF /* Pods_NinjaOneProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NinjaOneProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E941CC19144D4A949C38460E /* Pods-NinjaOneProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinjaOneProject.debug.xcconfig"; path = "Target Support Files/Pods-NinjaOneProject/Pods-NinjaOneProject.debug.xcconfig"; sourceTree = "<group>"; };
+		EC83825F6F509FA3D4E52BEF /* Pods-NinjaOneProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinjaOneProjectTests.release.xcconfig"; path = "Target Support Files/Pods-NinjaOneProjectTests/Pods-NinjaOneProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D2FB8F935B7712D234A8E87 /* Pods_NinjaOneProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,26 +98,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		30CF1F3B28CFD96C0071842F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				B2A0E2D420DC287D2F89E681 /* Pods_NinjaOneProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D4AAE42EDDA4BC1CF74E50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D4E3C6B0C17F8056188EAE3 /* Pods_NinjaOneProject.framework */,
+				DD7877829B4DA2C4D42388DF /* Pods_NinjaOneProjectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		30CF1F1528CFD96A0071842F = {
 			isa = PBXGroup;
 			children = (
 				30CF1F2028CFD96A0071842F /* NinjaOneProject */,
 				30CF1F3728CFD96C0071842F /* NinjaOneProjectTests */,
-				30CF1F4128CFD96C0071842F /* NinjaOneProjectUITests */,
 				30CF1F1F28CFD96A0071842F /* Products */,
+				A82E3101739FF372617DE708 /* Pods */,
+				09D4AAE42EDDA4BC1CF74E50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,7 +130,6 @@
 			children = (
 				30CF1F1E28CFD96A0071842F /* NinjaOneProject.app */,
 				30CF1F3428CFD96C0071842F /* NinjaOneProjectTests.xctest */,
-				30CF1F3E28CFD96C0071842F /* NinjaOneProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +137,10 @@
 		30CF1F2028CFD96A0071842F /* NinjaOneProject */ = {
 			isa = PBXGroup;
 			children = (
-				30CF1F2128CFD96A0071842F /* AppDelegate.swift */,
-				30CF1F2328CFD96A0071842F /* SceneDelegate.swift */,
-				30CF1F2528CFD96A0071842F /* ViewController.swift */,
-				30CF1F2728CFD96A0071842F /* Main.storyboard */,
-				30CF1F2A28CFD96C0071842F /* Assets.xcassets */,
-				30CF1F2C28CFD96C0071842F /* LaunchScreen.storyboard */,
-				30CF1F2F28CFD96C0071842F /* Info.plist */,
+				30CF1F5728CFD9A60071842F /* Base.Iproj */,
+				30CF1F5628CFD9A40071842F /* Resources */,
+				30CF1F5428CFD9A10071842F /* Home */,
+				30CF1F5328CFD99C0071842F /* Fundamentals */,
 			);
 			path = NinjaOneProject;
 			sourceTree = "<group>";
@@ -118,13 +153,173 @@
 			path = NinjaOneProjectTests;
 			sourceTree = "<group>";
 		};
-		30CF1F4128CFD96C0071842F /* NinjaOneProjectUITests */ = {
+		30CF1F5328CFD99C0071842F /* Fundamentals */ = {
 			isa = PBXGroup;
 			children = (
-				30CF1F4228CFD96C0071842F /* NinjaOneProjectUITests.swift */,
-				30CF1F4428CFD96C0071842F /* NinjaOneProjectUITestsLaunchTests.swift */,
+				30CF1F7328CFDC4A0071842F /* Coordinators */,
+				30CF1F7228CFDC480071842F /* Network */,
+				30CF1F7128CFDC420071842F /* Binding */,
 			);
-			path = NinjaOneProjectUITests;
+			path = Fundamentals;
+			sourceTree = "<group>";
+		};
+		30CF1F5428CFD9A10071842F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F7A28CFDD310071842F /* Model */,
+				30CF1F6B28CFDBC00071842F /* Coordinator */,
+				30CF1F6A28CFDBBF0071842F /* View */,
+				30CF1F6928CFDBBC0071842F /* ViewModel */,
+				30CF1F6828CFDBBB0071842F /* Repository */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		30CF1F5528CFD9A30071842F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F5E28CFDB420071842F /* UIViewController+Extensions.swift */,
+				30CF1F6028CFDB510071842F /* String+Extensions.swift */,
+				30CF1F8328CFE5130071842F /* UIVIew+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30CF1F5628CFD9A40071842F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F5928CFD9D20071842F /* Application */,
+				30CF1F5528CFD9A30071842F /* Extensions */,
+				30CF1F5828CFD9D00071842F /* Localizable */,
+				30CF1F2A28CFD96C0071842F /* Assets.xcassets */,
+				30CF1F2F28CFD96C0071842F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		30CF1F5728CFD9A60071842F /* Base.Iproj */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F2C28CFD96C0071842F /* LaunchScreen.storyboard */,
+			);
+			path = Base.Iproj;
+			sourceTree = "<group>";
+		};
+		30CF1F5828CFD9D00071842F /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F6228CFDB6E0071842F /* Localizable.swift */,
+				30CF1F6428CFDB8D0071842F /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		30CF1F5928CFD9D20071842F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F2128CFD96A0071842F /* AppDelegate.swift */,
+				30CF1F5A28CFDB130071842F /* AppMainCoordinator.swift */,
+				30CF1F5C28CFDB1C0071842F /* AppConfigurations.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		30CF1F6828CFDBBB0071842F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F6C28CFDBCE0071842F /* EndPoint */,
+				30CF1F7F28CFDE8D0071842F /* NinjaRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		30CF1F6928CFDBBC0071842F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F6F28CFDC2A0071842F /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30CF1F6A28CFDBBF0071842F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F8528CFF1A00071842F /* Cell */,
+				30CF1F2528CFD96A0071842F /* HomeViewController.swift */,
+				30CF1F8128CFE4570071842F /* FeedViewController.swift */,
+				30BCB92528D0A4470053A7B8 /* CategoryItemsViewController.swift */,
+				30BCB92928D0FB940053A7B8 /* DetailItemViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30CF1F6B28CFDBC00071842F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F6D28CFDC040071842F /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		30CF1F6C28CFDBCE0071842F /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F7D28CFDE550071842F /* NInjaEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		30CF1F7128CFDC420071842F /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F7428CFDC5C0071842F /* Bindable.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		30CF1F7228CFDC480071842F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F7828CFDC7D0071842F /* NetworkRepository.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		30CF1F7328CFDC4A0071842F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F7628CFDC6C0071842F /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		30CF1F7A28CFDD310071842F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F7B28CFDD410071842F /* NinjaModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30CF1F8528CFF1A00071842F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F8628CFF1A70071842F /* CategoryCell.swift */,
+				30BCB92728D0A6180053A7B8 /* ItemCell.swift */,
+				30BCB92B28D107C60053A7B8 /* ItemDetailCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A82E3101739FF372617DE708 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E941CC19144D4A949C38460E /* Pods-NinjaOneProject.debug.xcconfig */,
+				94E8B3BA5AD825CC878B3AE4 /* Pods-NinjaOneProject.release.xcconfig */,
+				B9B3A541E0191C99FA00FE55 /* Pods-NinjaOneProjectTests.debug.xcconfig */,
+				EC83825F6F509FA3D4E52BEF /* Pods-NinjaOneProjectTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +329,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30CF1F4828CFD96C0071842F /* Build configuration list for PBXNativeTarget "NinjaOneProject" */;
 			buildPhases = (
+				AD6856B4E27A5994187ECD75 /* [CP] Check Pods Manifest.lock */,
 				30CF1F1A28CFD96A0071842F /* Sources */,
 				30CF1F1B28CFD96A0071842F /* Frameworks */,
 				30CF1F1C28CFD96A0071842F /* Resources */,
+				C5B452A61BD4D4741A917E55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30CF1F4B28CFD96C0071842F /* Build configuration list for PBXNativeTarget "NinjaOneProjectTests" */;
 			buildPhases = (
+				7B88EA3AFCC48F754CCCCCEC /* [CP] Check Pods Manifest.lock */,
 				30CF1F3028CFD96C0071842F /* Sources */,
 				30CF1F3128CFD96C0071842F /* Frameworks */,
 				30CF1F3228CFD96C0071842F /* Resources */,
+				EEF6824F8FF0B1C5F79C558E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,24 +363,6 @@
 			productName = NinjaOneProjectTests;
 			productReference = 30CF1F3428CFD96C0071842F /* NinjaOneProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		30CF1F3D28CFD96C0071842F /* NinjaOneProjectUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 30CF1F4E28CFD96C0071842F /* Build configuration list for PBXNativeTarget "NinjaOneProjectUITests" */;
-			buildPhases = (
-				30CF1F3A28CFD96C0071842F /* Sources */,
-				30CF1F3B28CFD96C0071842F /* Frameworks */,
-				30CF1F3C28CFD96C0071842F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				30CF1F4028CFD96C0071842F /* PBXTargetDependency */,
-			);
-			name = NinjaOneProjectUITests;
-			productName = NinjaOneProjectUITests;
-			productReference = 30CF1F3E28CFD96C0071842F /* NinjaOneProjectUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -197,10 +378,6 @@
 						CreatedOnToolsVersion = 13.3;
 					};
 					30CF1F3328CFD96C0071842F = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = 30CF1F1D28CFD96A0071842F;
-					};
-					30CF1F3D28CFD96C0071842F = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = 30CF1F1D28CFD96A0071842F;
 					};
@@ -221,7 +398,6 @@
 			targets = (
 				30CF1F1D28CFD96A0071842F /* NinjaOneProject */,
 				30CF1F3328CFD96C0071842F /* NinjaOneProjectTests */,
-				30CF1F3D28CFD96C0071842F /* NinjaOneProjectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,8 +408,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30CF1F2E28CFD96C0071842F /* LaunchScreen.storyboard in Resources */,
+				30CF1F6528CFDB8D0071842F /* Localizable.strings in Resources */,
 				30CF1F2B28CFD96C0071842F /* Assets.xcassets in Resources */,
-				30CF1F2928CFD96A0071842F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,23 +420,116 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30CF1F3C28CFD96C0071842F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B88EA3AFCC48F754CCCCCEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NinjaOneProjectTests-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		AD6856B4E27A5994187ECD75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NinjaOneProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5B452A61BD4D4741A917E55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NinjaOneProject/Pods-NinjaOneProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NinjaOneProject/Pods-NinjaOneProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NinjaOneProject/Pods-NinjaOneProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF6824F8FF0B1C5F79C558E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NinjaOneProjectTests/Pods-NinjaOneProjectTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NinjaOneProjectTests/Pods-NinjaOneProjectTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NinjaOneProjectTests/Pods-NinjaOneProjectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30CF1F1A28CFD96A0071842F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30CF1F2628CFD96A0071842F /* ViewController.swift in Sources */,
+				30CF1F7928CFDC7D0071842F /* NetworkRepository.swift in Sources */,
+				30CF1F7528CFDC5C0071842F /* Bindable.swift in Sources */,
+				30BCB92628D0A4470053A7B8 /* CategoryItemsViewController.swift in Sources */,
+				30CF1F2628CFD96A0071842F /* HomeViewController.swift in Sources */,
+				30BCB92828D0A6180053A7B8 /* ItemCell.swift in Sources */,
+				30CF1F7028CFDC2A0071842F /* HomeViewModel.swift in Sources */,
+				30CF1F6328CFDB6E0071842F /* Localizable.swift in Sources */,
+				30CF1F8728CFF1A70071842F /* CategoryCell.swift in Sources */,
 				30CF1F2228CFD96A0071842F /* AppDelegate.swift in Sources */,
-				30CF1F2428CFD96A0071842F /* SceneDelegate.swift in Sources */,
+				30BCB92C28D107C60053A7B8 /* ItemDetailCell.swift in Sources */,
+				30CF1F8228CFE4580071842F /* FeedViewController.swift in Sources */,
+				30CF1F5F28CFDB420071842F /* UIViewController+Extensions.swift in Sources */,
+				30BCB92A28D0FB940053A7B8 /* DetailItemViewController.swift in Sources */,
+				30CF1F7C28CFDD410071842F /* NinjaModel.swift in Sources */,
+				30CF1F7728CFDC6C0071842F /* Coordinator.swift in Sources */,
+				30CF1F5D28CFDB1C0071842F /* AppConfigurations.swift in Sources */,
+				30CF1F6E28CFDC040071842F /* HomeCoordinator.swift in Sources */,
+				30CF1F7E28CFDE550071842F /* NInjaEndPoint.swift in Sources */,
+				30CF1F6128CFDB510071842F /* String+Extensions.swift in Sources */,
+				30CF1F5B28CFDB130071842F /* AppMainCoordinator.swift in Sources */,
+				30CF1F8428CFE5130071842F /* UIVIew+Extensions.swift in Sources */,
+				30CF1F8028CFDE8D0071842F /* NinjaRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +541,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30CF1F3A28CFD96C0071842F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				30CF1F4528CFD96C0071842F /* NinjaOneProjectUITestsLaunchTests.swift in Sources */,
-				30CF1F4328CFD96C0071842F /* NinjaOneProjectUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,22 +549,9 @@
 			target = 30CF1F1D28CFD96A0071842F /* NinjaOneProject */;
 			targetProxy = 30CF1F3528CFD96C0071842F /* PBXContainerItemProxy */;
 		};
-		30CF1F4028CFD96C0071842F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 30CF1F1D28CFD96A0071842F /* NinjaOneProject */;
-			targetProxy = 30CF1F3F28CFD96C0071842F /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		30CF1F2728CFD96A0071842F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				30CF1F2828CFD96A0071842F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		30CF1F2C28CFD96C0071842F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -320,6 +567,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_BASE_URL = "https://botw-compendium.herokuapp.com/";
+				API_KEY = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -366,6 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IMAGE_URL = "https://openweathermap.org/img/wn/%@@2x.png";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -380,6 +630,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_BASE_URL = "https://botw-compendium.herokuapp.com/";
+				API_KEY = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -420,6 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IMAGE_URL = "https://openweathermap.org/img/wn/%@@2x.png";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -432,6 +685,7 @@
 		};
 		30CF1F4928CFD96C0071842F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E941CC19144D4A949C38460E /* Pods-NinjaOneProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,10 +693,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NinjaOneProject/Info.plist;
+				INFOPLIST_FILE = NinjaOneProject/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +713,7 @@
 		};
 		30CF1F4A28CFD96C0071842F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94E8B3BA5AD825CC878B3AE4 /* Pods-NinjaOneProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,10 +721,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NinjaOneProject/Info.plist;
+				INFOPLIST_FILE = NinjaOneProject/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,6 +741,7 @@
 		};
 		30CF1F4C28CFD96C0071842F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B3A541E0191C99FA00FE55 /* Pods-NinjaOneProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +762,7 @@
 		};
 		30CF1F4D28CFD96C0071842F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC83825F6F509FA3D4E52BEF /* Pods-NinjaOneProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,42 +778,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NinjaOneProject.app/NinjaOneProject";
-			};
-			name = Release;
-		};
-		30CF1F4F28CFD96C0071842F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.renatomateusx.NinjaOneProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NinjaOneProject;
-			};
-			name = Debug;
-		};
-		30CF1F5028CFD96C0071842F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.renatomateusx.NinjaOneProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NinjaOneProject;
 			};
 			name = Release;
 		};
@@ -588,15 +807,6 @@
 			buildConfigurations = (
 				30CF1F4C28CFD96C0071842F /* Debug */,
 				30CF1F4D28CFD96C0071842F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		30CF1F4E28CFD96C0071842F /* Build configuration list for PBXNativeTarget "NinjaOneProjectUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				30CF1F4F28CFD96C0071842F /* Debug */,
-				30CF1F5028CFD96C0071842F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
