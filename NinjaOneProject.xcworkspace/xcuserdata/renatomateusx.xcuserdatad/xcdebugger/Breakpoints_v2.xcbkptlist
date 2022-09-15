@@ -599,7 +599,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5FAC7C06-E1CA-44A3-B4C9-0A803575496D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NinjaOneProject/Home/View/FeedViewController.swift"
@@ -631,7 +631,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D1A34FCA-9155-4A2B-99F3-1C919D3218F0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NinjaOneProject/Home/Coordinator/HomeCoordinator.swift"
@@ -647,7 +647,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D23917A5-B8AD-4A80-82AC-8D76B4A8D178"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NinjaOneProject/Home/Coordinator/HomeCoordinator.swift"

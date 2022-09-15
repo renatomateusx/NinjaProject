@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreaturesListViewController: UICollectionViewController {
+class CreaturesListViewController: UICollectionViewController, UISearchControllerDelegate, UISearchResultsUpdating  {
     
     //MARK: Properties
     private var loading: UIActivityIndicatorView?
@@ -20,9 +20,13 @@ class CreaturesListViewController: UICollectionViewController {
     
     var data: Creatures? {
         didSet {
+            nativeData = data?.food
+            nativeData?.append(contentsOf: data?.nonFood ?? [])
             self.collectionView.reloadData()
         }
     }
+    
+    var nativeData: Equipments?
     
     //MARK: Lifecycle
     
@@ -58,6 +62,7 @@ class CreaturesListViewController: UICollectionViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         collectionView.refreshControl = refreshControl
+        setupSearchController()
     }
     
     private func showLoading() {
@@ -82,6 +87,35 @@ class CreaturesListViewController: UICollectionViewController {
         }
     }
     
+    private func setupSearchController() {
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = "Search..."
+        navigationItem.searchController = search
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text?.lowercased() {
+            if searchText.count == 0 {
+                nativeData = data?.food
+                nativeData?.append(contentsOf: data?.nonFood ?? [])
+            }
+            else {
+                let nonFood = data?.nonFood?.filter {
+                    return $0.name.lowercased().contains(searchText)
+                } ?? []
+                
+                let food = data?.food?.filter {
+                    return $0.name.lowercased().contains(searchText)
+                } ?? []
+                nativeData = nonFood
+                nativeData?.append(contentsOf: food)
+            }
+        }
+        self.collectionView.reloadData()
+    }
+    
     //MARK: Selectors
     
     @objc func handleRefresh(){
@@ -92,15 +126,15 @@ class CreaturesListViewController: UICollectionViewController {
 extension CreaturesListViewController {
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        2
+        1
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section == 0 ? data?.food?.count ?? 0 : data?.nonFood?.count ?? 0
+        return nativeData?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let data = indexPath.section == 0 ? data?.food?[indexPath.row] : data?.nonFood?[indexPath.row] {
+        if let data = nativeData?[indexPath.row] {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCell.identifier,
                                                       for: indexPath) as! ItemCell
             cell.configure(data: data)
@@ -111,7 +145,7 @@ extension CreaturesListViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let item = indexPath.section == 0 ? data?.food?[indexPath.row] : data?.nonFood?[indexPath.row] {
+        if let item = nativeData?[indexPath.row] {
             self.showLoading()
             self.viewModel.fetchById(id: item.id)
         }
