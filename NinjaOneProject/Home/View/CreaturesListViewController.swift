@@ -1,36 +1,34 @@
 //
-//  CategoryItemsViewController.swift
+//  CreaturesListViewController.swift
 //  NinjaOneProject
 //
-//  Created by Renato Mateus on 13/09/22.
+//  Created by Renato Mateus on 14/09/22.
 //
 
 import UIKit
 
-class CategoryItemsViewController: UICollectionViewController, UISearchControllerDelegate, UISearchResultsUpdating {
+class CreaturesListViewController: UICollectionViewController {
     
     //MARK: Properties
     private var loading: UIActivityIndicatorView?
+    
     var viewModel: HomeViewModel! {
         didSet {
             setupObservers()
         }
     }
-    var data: Equipments? {
+    
+    var data: Creatures? {
         didSet {
-            self.nativeData = data
             self.collectionView.reloadData()
         }
     }
-    
-    var nativeData: Equipments?
     
     //MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        setupSearchController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,8 +58,6 @@ class CategoryItemsViewController: UICollectionViewController, UISearchControlle
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         collectionView.refreshControl = refreshControl
-        
-        setupLoading()
     }
     
     private func showLoading() {
@@ -74,28 +70,6 @@ class CategoryItemsViewController: UICollectionViewController, UISearchControlle
         DispatchQueue.main.async {
             self.loading?.stopAnimating()
         }
-    }
-    
-    private func setupSearchController() {
-        let search = UISearchController(searchResultsController: nil)
-        search.searchResultsUpdater = self
-        search.obscuresBackgroundDuringPresentation = false
-        search.searchBar.placeholder = "Search..."
-        navigationItem.searchController = search
-    }
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text?.lowercased() {
-            if searchText.count == 0 {
-                nativeData = data
-            }
-            else {
-                nativeData = data?.filter {
-                    return $0.name.lowercased().contains(searchText)
-                } ?? []
-            }
-        }
-        self.collectionView.reloadData()
     }
     
     private func setupObservers() {
@@ -115,13 +89,18 @@ class CategoryItemsViewController: UICollectionViewController, UISearchControlle
     }
 }
 //MARK: UICollectionViewDelegate/DataSource
-extension CategoryItemsViewController {
+extension CreaturesListViewController {
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        2
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.nativeData?.count ?? 0
+        return section == 0 ? data?.food?.count ?? 0 : data?.nonFood?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let data = nativeData?[indexPath.row] {
+        if let data = indexPath.section == 0 ? data?.food?[indexPath.row] : data?.nonFood?[indexPath.row] {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCell.identifier,
                                                       for: indexPath) as! ItemCell
             cell.configure(data: data)
@@ -132,7 +111,7 @@ extension CategoryItemsViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let item = nativeData?[indexPath.row] {
+        if let item = indexPath.section == 0 ? data?.food?[indexPath.row] : data?.nonFood?[indexPath.row] {
             self.showLoading()
             self.viewModel.fetchById(id: item.id)
         }
@@ -140,9 +119,11 @@ extension CategoryItemsViewController {
 }
 
 //MARK: UICollectionViewDelegate/FlowLayout
-extension CategoryItemsViewController: UICollectionViewDelegateFlowLayout {
+extension CreaturesListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let plusHeight: CGFloat = 400
         return CGSize(width: collectionView.bounds.size.width, height: plusHeight)
     }
 }
+
+

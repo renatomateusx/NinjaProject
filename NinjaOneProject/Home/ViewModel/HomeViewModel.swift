@@ -9,12 +9,14 @@ import Foundation
 
 protocol HomeViewModelProtocol {
     func fetchData(_ page: Int)
-    func fetchDataByCategory(category: Category)
+    func fetchDataByCategory(category: NinjaCategory)
     func fetchById(id: Int)
+    func fetchItemByCreature(creature: NinjaCategory)
     
     var monsters: Bindable<DataClass> { get set }
     var equipments: Bindable<Cat> { get set }
     var equipment: Bindable<Item> { get set }
+    var creatures: Bindable<Creatures> { get set }
     var error: Bindable<Error> { get set }
 }
 
@@ -26,6 +28,7 @@ class HomeViewModel {
     var monsters = Bindable<DataClass>()
     var equipments = Bindable<Cat>()
     var equipment = Bindable<Item>()
+    var creatures = Bindable<Creatures>()
     var error = Bindable<Error>()
     // MARK: - Inits
     
@@ -46,7 +49,7 @@ class HomeViewModel {
         }
     }
     
-    func fetchDataByCategory(category: Category) {
+    func fetchDataByCategory(category: NinjaCategory) {
         ninjaService.fetchDataByCategory(category: category) { result in
             switch result {
             case .success(let equipments):
@@ -62,6 +65,17 @@ class HomeViewModel {
             switch result {
             case .success(let equipment):
                 self.equipment.value = equipment
+            case .failure(let error):
+                self.error.value = error
+            }
+        }
+    }
+    
+    func fetchItemByCreature(creature: NinjaCategory) {
+        ninjaService.fetchDataByCreature(creature: creature) { result in
+            switch result {
+            case .success(let equipments):
+                self.creatures.value = equipments.data
             case .failure(let error):
                 self.error.value = error
             }

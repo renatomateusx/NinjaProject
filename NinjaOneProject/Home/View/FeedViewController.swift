@@ -11,13 +11,13 @@ class FeedViewController: UICollectionViewController {
     
     //MARK: Properties
     private var loading: UIActivityIndicatorView?
-    private var category: Category?
+    private var category: NinjaCategory?
     var viewModel: HomeViewModel! {
         didSet {
             setupObservers()
         }
     }
-    var data = Category.allCases {
+    var data = NinjaCategory.allCases {
         didSet {
             collectionView.reloadData()
         }
@@ -38,17 +38,6 @@ class FeedViewController: UICollectionViewController {
     
     //MARK: Helpers
     
-    private func setupLoading() {
-        loading = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-        loading?.color = UIColor.white
-        loading?.translatesAutoresizingMaskIntoConstraints = false
-        if let loading = loading {
-            self.view.addSubview(loading)
-            loading.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-            loading.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        }
-    }
-    
     private func configureUI(){
         view.backgroundColor = .systemBackground
         collectionView.backgroundColor = .systemBackground
@@ -57,19 +46,6 @@ class FeedViewController: UICollectionViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         collectionView.refreshControl = refreshControl
-        setupLoading()
-    }
-    
-    private func showLoading() {
-        DispatchQueue.main.async {
-            self.loading?.startAnimating()
-        }
-    }
-    
-    private func stopLoading() {
-        DispatchQueue.main.async {
-            self.loading?.stopAnimating()
-        }
     }
     
     private func setupObservers() {
@@ -79,8 +55,22 @@ class FeedViewController: UICollectionViewController {
                                                                 items: equipments.data,
                                                                 viewModel: self?.viewModel)
             }
-           
-            self?.stopLoading()
+        }
+        
+        viewModel.creatures.bind { [weak self] (_) in
+            if let creatures = self?.viewModel.creatures.value {
+                self?.viewModel.coordinator.goToCreatureItems(category: self?.category,
+                                                                items: creatures,
+                                                                viewModel: self?.viewModel)
+            }
+        }
+        
+        viewModel.error.bind { [weak self] (_) in
+            if let error = self?.viewModel.error.value {
+                DispatchQueue.main.async {
+                    self?.alert(title: .localized(.oopsTitle), message: error.localizedDescription)
+                }
+            }
         }
         
     }
@@ -108,8 +98,11 @@ extension FeedViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let category = data[indexPath.row]
         self.category = category
-        self.showLoading()
-        viewModel.fetchDataByCategory(category: category)
+        if case NinjaCategory.creatures = category {
+            viewModel.fetchItemByCreature(creature: category)
+        } else {
+            viewModel.fetchDataByCategory(category: category)
+        }
     }
 }
 

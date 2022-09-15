@@ -33,6 +33,10 @@
 		30CF1F8228CFE4580071842F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F8128CFE4570071842F /* FeedViewController.swift */; };
 		30CF1F8428CFE5130071842F /* UIVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F8328CFE5130071842F /* UIVIew+Extensions.swift */; };
 		30CF1F8728CFF1A70071842F /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF1F8628CFF1A70071842F /* CategoryCell.swift */; };
+		30CFC23D28D26CB800E420A0 /* NinjaRepositoryMockSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CFC23C28D26CB800E420A0 /* NinjaRepositoryMockSuccess.swift */; };
+		30CFC23F28D26CC200E420A0 /* NinjaRepositoryMockFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CFC23E28D26CC200E420A0 /* NinjaRepositoryMockFailure.swift */; };
+		30CFC24128D26CD400E420A0 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CFC24028D26CD400E420A0 /* HomeViewModelTests.swift */; };
+		30CFC24328D294E300E420A0 /* CreaturesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CFC24228D294E300E420A0 /* CreaturesListViewController.swift */; };
 		6D2FB8F935B7712D234A8E87 /* Pods_NinjaOneProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E3C6B0C17F8056188EAE3 /* Pods_NinjaOneProject.framework */; };
 		B2A0E2D420DC287D2F89E681 /* Pods_NinjaOneProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7877829B4DA2C4D42388DF /* Pods_NinjaOneProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +81,10 @@
 		30CF1F8128CFE4570071842F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		30CF1F8328CFE5130071842F /* UIVIew+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extensions.swift"; sourceTree = "<group>"; };
 		30CF1F8628CFF1A70071842F /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		30CFC23C28D26CB800E420A0 /* NinjaRepositoryMockSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaRepositoryMockSuccess.swift; sourceTree = "<group>"; };
+		30CFC23E28D26CC200E420A0 /* NinjaRepositoryMockFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaRepositoryMockFailure.swift; sourceTree = "<group>"; };
+		30CFC24028D26CD400E420A0 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		30CFC24228D294E300E420A0 /* CreaturesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaturesListViewController.swift; sourceTree = "<group>"; };
 		94E8B3BA5AD825CC878B3AE4 /* Pods-NinjaOneProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinjaOneProject.release.xcconfig"; path = "Target Support Files/Pods-NinjaOneProject/Pods-NinjaOneProject.release.xcconfig"; sourceTree = "<group>"; };
 		9D4E3C6B0C17F8056188EAE3 /* Pods_NinjaOneProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NinjaOneProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B3A541E0191C99FA00FE55 /* Pods-NinjaOneProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinjaOneProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-NinjaOneProjectTests/Pods-NinjaOneProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +156,9 @@
 		30CF1F3728CFD96C0071842F /* NinjaOneProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				30CF1F3828CFD96C0071842F /* NinjaOneProjectTests.swift */,
+				30CFC23B28D26C7D00E420A0 /* ViewModel */,
+				30CFC23A28D26C7B00E420A0 /* View */,
+				30CFC23928D26C7900E420A0 /* Mock */,
 			);
 			path = NinjaOneProjectTests;
 			sourceTree = "<group>";
@@ -249,6 +259,7 @@
 				30CF1F8128CFE4570071842F /* FeedViewController.swift */,
 				30BCB92528D0A4470053A7B8 /* CategoryItemsViewController.swift */,
 				30BCB92928D0FB940053A7B8 /* DetailItemViewController.swift */,
+				30CFC24228D294E300E420A0 /* CreaturesListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +320,31 @@
 				30BCB92B28D107C60053A7B8 /* ItemDetailCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		30CFC23928D26C7900E420A0 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				30CFC23C28D26CB800E420A0 /* NinjaRepositoryMockSuccess.swift */,
+				30CFC23E28D26CC200E420A0 /* NinjaRepositoryMockFailure.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		30CFC23A28D26C7B00E420A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30CF1F3828CFD96C0071842F /* NinjaOneProjectTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30CFC23B28D26C7D00E420A0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30CFC24028D26CD400E420A0 /* HomeViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A82E3101739FF372617DE708 /* Pods */ = {
@@ -526,6 +562,7 @@
 				30CF1F5D28CFDB1C0071842F /* AppConfigurations.swift in Sources */,
 				30CF1F6E28CFDC040071842F /* HomeCoordinator.swift in Sources */,
 				30CF1F7E28CFDE550071842F /* NInjaEndPoint.swift in Sources */,
+				30CFC24328D294E300E420A0 /* CreaturesListViewController.swift in Sources */,
 				30CF1F6128CFDB510071842F /* String+Extensions.swift in Sources */,
 				30CF1F5B28CFDB130071842F /* AppMainCoordinator.swift in Sources */,
 				30CF1F8428CFE5130071842F /* UIVIew+Extensions.swift in Sources */,
@@ -537,7 +574,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30CFC23F28D26CC200E420A0 /* NinjaRepositoryMockFailure.swift in Sources */,
+				30CFC23D28D26CB800E420A0 /* NinjaRepositoryMockSuccess.swift in Sources */,
 				30CF1F3928CFD96C0071842F /* NinjaOneProjectTests.swift in Sources */,
+				30CFC24128D26CD400E420A0 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

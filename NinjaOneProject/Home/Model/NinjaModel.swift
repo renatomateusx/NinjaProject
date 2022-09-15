@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Createures
 struct Creature: Codable {
-    let data: DataClass
+    let data: Creatures
 }
 
 struct Cat: Codable {
@@ -29,7 +29,7 @@ struct DataClass: Codable {
 
 // MARK: - Creatures
 struct Creatures: Codable {
-    let food, nonFood: [Equipment]
+    let food, nonFood: [Equipment]?
 
     enum CodingKeys: String, CodingKey {
         case food
@@ -40,7 +40,7 @@ struct Creatures: Codable {
 typealias Equipments = [Equipment]
 // MARK: - Equipment
 struct Equipment: Codable {
-    let category: Category
+    let category: NinjaCategory
     let commonLocations: [String]?
     let cookingEffect: String?
     let equipmentDescription: String
@@ -61,7 +61,7 @@ struct Equipment: Codable {
     }
 }
 
-enum Category: String, Codable, CaseIterable {
+enum NinjaCategory: String, Codable, CaseIterable {
     case creatures = "creatures"
     case equipment = "equipment"
     case materials = "materials"

@@ -17,6 +17,7 @@ class ItemDetailCell: UICollectionViewCell  {
     private lazy var categoryImageView: UIImageView = {
         let categoryImageView = UIImageView()
         categoryImageView.layer.masksToBounds = true
+        categoryImageView.image = UIImage(named: "placeholder")
         return categoryImageView
     }()
     
@@ -135,8 +136,8 @@ class ItemDetailCell: UICollectionViewCell  {
         
         
         
-        self.itemLabel.text = data.name
-        self.categoryLabel.text = data.category.rawValue
+        self.itemLabel.text = captalize(data.name)
+        self.categoryLabel.text = captalize(data.category.rawValue)
         self.descriptionLabel.text = data.equipmentDescription
         
         self.commonLocationsLabel.text = data.commonLocations?.joined(separator: ", ")

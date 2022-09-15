@@ -59,13 +59,13 @@ extension HomeViewController {
         }
     }
     
-    private func showLoading() {
+    func showLoading() {
         DispatchQueue.main.async {
             self.loading?.startAnimating()
         }
     }
     
-    private func stopLoading() {
+    func stopLoading() {
         DispatchQueue.main.async {
             self.loading?.stopAnimating()
         }
@@ -96,9 +96,10 @@ extension HomeViewController {
             if let error = self?.viewModel.error.value {
                 DispatchQueue.main.async {
                     self?.alert(title: .localized(.oopsTitle), message: error.localizedDescription)
-                    self?.stopLoading()
+                    
                 }
             }
+            self?.stopLoading()
         }
     }
 }

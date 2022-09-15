@@ -8,7 +8,7 @@
 import Foundation
 
 struct NInjaEndPoint {
-    let category: Category?
+    let category: NinjaCategory?
     let id: Int?
     let appConfiguration: AppConfigurations
 

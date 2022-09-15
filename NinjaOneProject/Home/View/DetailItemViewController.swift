@@ -35,7 +35,7 @@ class DetailItemViewController: UICollectionViewController {
     
     private func setupLoading() {
         loading = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-        loading?.color = UIColor.white
+        loading?.color = UIColor.red
         loading?.translatesAutoresizingMaskIntoConstraints = false
         if let loading = loading {
             self.view.addSubview(loading)
@@ -75,7 +75,7 @@ class DetailItemViewController: UICollectionViewController {
 //MARK: UICollectionViewDelegate/DataSource
 extension DetailItemViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.data?.count ?? 0
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

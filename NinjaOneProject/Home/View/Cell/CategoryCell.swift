@@ -11,13 +11,13 @@ class CategoryCell: UICollectionViewCell  {
     
     // MARK: Properties
     static let identifier = "CategoryCell"
-    var data: Category?
+    var data: NinjaCategory?
     
     private let categoryLabel: UILabel = {
        let label = UILabel()
-        label.textColor = .lightGray
+        label.textColor = .darkGray
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 22)
         return label
     }()
 
@@ -43,8 +43,36 @@ class CategoryCell: UICollectionViewCell  {
     
     // MARK: Helpers
     
-    func configure(data: Category){
+    func configure(data: NinjaCategory){
         self.data = data
-        self.categoryLabel.text = data.rawValue
+        self.categoryLabel.text = captalize(data.rawValue)
+    }
+}
+
+
+extension UICollectionViewCell {
+    func captalize(_ value: String) -> String {
+        var output = ""
+        
+        let phraseArray = value.components(separatedBy: " ")
+        for phra in phraseArray {
+            var index = 0
+            
+            for c in phra {
+                if index == 0 {
+                    output += String(c).uppercased()
+                } else {
+                    output += String(c)
+                }
+                index += 1
+                
+                if index == phra.count {
+                    output += " "
+                    index = 0
+                }
+            }
+        }
+        
+        return output
     }
 }

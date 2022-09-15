@@ -17,6 +17,7 @@ class ItemCell: UICollectionViewCell  {
     private lazy var categoryImageView: UIImageView = {
         let categoryImageView = UIImageView()
         categoryImageView.layer.masksToBounds = true
+        categoryImageView.image = UIImage(named: "placeholder")
         return categoryImageView
     }()
     
@@ -59,7 +60,7 @@ class ItemCell: UICollectionViewCell  {
     
     func configure(data: Equipment){
         self.data = data
-        self.categoryLabel.text = data.name
+        self.categoryLabel.text = captalize(data.name)
         if let url = URL(string: data.image) {
             self.categoryImageView.sd_setImage(with: url, completed: nil)
         }
